@@ -29,7 +29,7 @@ print("Downloading NIFTY 50 stock data...")
 data = yf.download(
     tickers=nifty50_symbols,
     start=start_date,
-    end=end_datex,
+    end=end_date,
     group_by='ticker',   # so each symbol has its own sub-data
     auto_adjust=True,    # get adjusted close by default
     threads=True
