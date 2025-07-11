@@ -205,11 +205,8 @@ class PortfolioNeuralNetwork:
             ))
             model.add(tf.keras.layers.Dropout(dropout_rate))
         
-        # Output layer (raw predictions)
-        model.add(tf.keras.layers.Dense(output_dim, activation='linear'))
-        
-        # Portfolio weight normalization layer
-        model.add(tf.keras.layers.Lambda(lambda x: tf.nn.softmax(x)))
+        # Output layer with softmax activation (ensures weights sum to 1)
+        model.add(tf.keras.layers.Dense(output_dim, activation='softmax'))
         
         # Compile model
         model.compile(
@@ -488,7 +485,7 @@ class PortfolioNeuralNetwork:
         plt.close()
         print("Backtest results plot saved to outputs/backtest_results.png")
     
-    def save_model(self, model_path='outputs/portfolio_neural_network.h5'):
+    def save_model(self, model_path='outputs/portfolio_neural_network.keras'):
         """Save the trained model"""
         if self.model is None:
             raise ValueError("No model to save!")
@@ -496,7 +493,7 @@ class PortfolioNeuralNetwork:
         # Create outputs directory if it doesn't exist
         os.makedirs(os.path.dirname(model_path), exist_ok=True)
         
-        # Save model
+        # Save model in Keras format
         self.model.save(model_path)
         
         # Save scalers and metadata
@@ -510,13 +507,13 @@ class PortfolioNeuralNetwork:
             'prediction_horizon': self.prediction_horizon
         }
         
-        with open(model_path.replace('.h5', '_metadata.pkl'), 'wb') as f:
+        with open(model_path.replace('.keras', '_metadata.pkl'), 'wb') as f:
             pickle.dump(metadata, f)
         
         print(f"Model saved to {model_path}")
-        print(f"Metadata saved to {model_path.replace('.h5', '_metadata.pkl')}")
+        print(f"Metadata saved to {model_path.replace('.keras', '_metadata.pkl')}")
     
-    def load_model(self, model_path='outputs/portfolio_neural_network.h5'):
+    def load_model(self, model_path='outputs/portfolio_neural_network.keras'):
         """Load a trained model"""
         import pickle
         
@@ -524,7 +521,7 @@ class PortfolioNeuralNetwork:
         self.model = tf.keras.models.load_model(model_path)
         
         # Load metadata
-        with open(model_path.replace('.h5', '_metadata.pkl'), 'rb') as f:
+        with open(model_path.replace('.keras', '_metadata.pkl'), 'rb') as f:
             metadata = pickle.load(f)
         
         self.scaler_features = metadata['scaler_features']

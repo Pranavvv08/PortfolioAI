@@ -46,7 +46,7 @@ def run_basic_example():
     backtest_results = pnn.backtest_portfolio()
     
     # Save model
-    pnn.save_model('outputs/basic_portfolio_model.h5')
+    pnn.save_model('outputs/basic_portfolio_model.keras')
     
     return pnn, backtest_results
 
@@ -110,7 +110,7 @@ def run_advanced_example():
     backtest_results = pnn.backtest_portfolio()
     
     # Save model with different name
-    pnn.save_model('outputs/advanced_portfolio_model.h5')
+    pnn.save_model('outputs/advanced_portfolio_model.keras')
     
     return pnn, backtest_results
 
@@ -154,7 +154,7 @@ def generate_predictions_for_new_data():
     # Load a trained model
     try:
         pnn = PortfolioNeuralNetwork()
-        pnn.load_model('outputs/basic_portfolio_model.h5')
+        pnn.load_model('outputs/basic_portfolio_model.keras')
         
         # Load current data
         pnn.load_data()
@@ -207,9 +207,9 @@ def main():
     
     print("\nAll examples completed successfully!")
     print("\nSaved models:")
-    print("- outputs/basic_portfolio_model.h5")
-    print("- outputs/advanced_portfolio_model.h5")
-    print("- outputs/portfolio_neural_network.h5")
+    print("- outputs/basic_portfolio_model.keras")
+    print("- outputs/advanced_portfolio_model.keras")
+    print("- outputs/portfolio_neural_network.keras")
 
 if __name__ == "__main__":
     main()

@@ -47,7 +47,7 @@ def test_basic_functionality():
     
     # Save model
     print("6. Saving model...")
-    pnn.save_model('outputs/test_model.h5')
+    pnn.save_model('outputs/test_model.keras')
     print("   Model saved successfully")
     
     # Test prediction on new data
