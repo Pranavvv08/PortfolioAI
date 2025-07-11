@@ -1,0 +1,136 @@
+{
+  "generation_date": "2025-07-11T05:46:20.508142",
+  "data_summary": {
+    "start_date": "2025-02-03T00:00:00",
+    "end_date": "2025-07-04T00:00:00",
+    "n_observations": 103,
+    "n_assets": 50,
+    "assets": [
+      "RELIANCE.NS",
+      "TCS.NS",
+      "INFY.NS",
+      "HDFCBANK.NS",
+      "ICICIBANK.NS",
+      "ITC.NS",
+      "LT.NS",
+      "KOTAKBANK.NS",
+      "SBIN.NS",
+      "BHARTIARTL.NS",
+      "AXISBANK.NS",
+      "HCLTECH.NS",
+      "MARUTI.NS",
+      "ASIANPAINT.NS",
+      "WIPRO.NS",
+      "ULTRACEMCO.NS",
+      "HINDUNILVR.NS",
+      "BAJFINANCE.NS",
+      "NTPC.NS",
+      "TITAN.NS",
+      "SUNPHARMA.NS",
+      "TECHM.NS",
+      "INDUSINDBK.NS",
+      "POWERGRID.NS",
+      "JSWSTEEL.NS",
+      "ADANIENT.NS",
+      "BAJAJFINSV.NS",
+      "CIPLA.NS",
+      "COALINDIA.NS",
+      "EICHERMOT.NS",
+      "HINDALCO.NS",
+      "ONGC.NS",
+      "TATACONSUM.NS",
+      "NESTLEIND.NS",
+      "DRREDDY.NS",
+      "M&M.NS",
+      "GRASIM.NS",
+      "HDFCLIFE.NS",
+      "BRITANNIA.NS",
+      "APOLLOHOSP.NS",
+      "DIVISLAB.NS",
+      "BPCL.NS",
+      "SBILIFE.NS",
+      "TATAMOTORS.NS",
+      "HEROMOTOCO.NS",
+      "BAJAJ-AUTO.NS",
+      "UPL.NS",
+      "TATASTEEL.NS",
+      "ADANIPORTS.NS",
+      "IOC.NS"
+    ]
+  },
+  "optimization_results": {
+    "Risk_Model_Equal Weight": {
+      "annualized_return": 0.18071430616652134,
+      "annualized_volatility": 0.1506632239014476,
+      "sharpe_ratio": 1.199458643502351,
+      "max_drawdown": 0.0,
+      "method": "Risk Model"
+    },
+    "Risk_Model_Minimum Variance": {
+      "annualized_return": 0.18071430616652134,
+      "annualized_volatility": 0.1506632239014476,
+      "sharpe_ratio": 1.199458643502351,
+      "max_drawdown": 0.0,
+      "method": "Risk Model"
+    },
+    "Risk_Model_Maximum Sharpe": {
+      "annualized_return": 0.5436761366445023,
+      "annualized_volatility": 0.1551091453574888,
+      "sharpe_ratio": 3.5051198005859763,
+      "max_drawdown": 0.0,
+      "method": "Risk Model"
+    },
+    "Risk_Model_Risk Parity": {
+      "annualized_return": 0.16672393718411538,
+      "annualized_volatility": 0.14119630248822992,
+      "sharpe_ratio": 1.1807953483627054,
+      "max_drawdown": 0.0,
+      "method": "Risk Model"
+    },
+    "Equal Weight": {
+      "annualized_return": 0.18071430616652134,
+      "annualized_volatility": 0.1506632239014476,
+      "sharpe_ratio": 1.199458643502351,
+      "max_drawdown": 0.0,
+      "method": "Equal Weight"
+    },
+    "Momentum": {
+      "annualized_return": 0.2600288091668319,
+      "annualized_volatility": 0.16418130787018392,
+      "sharpe_ratio": 1.4893680864093697,
+      "max_drawdown": -0.06673174434012767,
+      "method": "Strategy Backtest"
+    },
+    "Mean Reversion": {
+      "annualized_return": 0.2508452649595314,
+      "annualized_volatility": 0.18290458673678234,
+      "sharpe_ratio": 1.3144096062123827,
+      "max_drawdown": -0.09770600723131523,
+      "method": "Strategy Backtest"
+    },
+    "Low Volatility": {
+      "annualized_return": 0.19749248518981344,
+      "annualized_volatility": 0.15262238954746143,
+      "sharpe_ratio": 1.2568253537741032,
+      "max_drawdown": -0.07224146372195944,
+      "method": "Strategy Backtest"
+    },
+    "Risk Parity": {
+      "annualized_return": 0.22974934141013725,
+      "annualized_volatility": 0.15072751807078746,
+      "sharpe_ratio": 1.5997453162429704,
+      "max_drawdown": -0.05828245323165096,
+      "method": "Strategy Backtest"
+    },
+    "Sharpe Optimization": {
+      "annualized_return": 0.09235754823496078,
+      "annualized_volatility": 0.1745300045840408,
+      "sharpe_ratio": 0.5928846607748449,
+      "max_drawdown": -0.09460520458413188,
+      "method": "Strategy Backtest"
+    }
+  },
+  "best_sharpe_strategy": "Risk_Model_Maximum Sharpe",
+  "lowest_volatility_strategy": "Risk_Model_Risk Parity",
+  "highest_return_strategy": "Risk_Model_Maximum Sharpe"
+}
